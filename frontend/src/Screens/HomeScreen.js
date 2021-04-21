@@ -12,7 +12,7 @@ const Home = () => {
         <div className="about">
             <div className="about_box about_01">
                 <img src={gh_1} className="rounded-circle" alt="..." />
-                <h2>Halal and Safe Investments</h2>
+                <h2>Halal And Safe Investments</h2>
                 <strong><p>
                     We offer a safe investment environment keeping the Islamic values in
                     mind. The localities in which the houses are invested in, are well
