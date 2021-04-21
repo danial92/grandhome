@@ -6,7 +6,7 @@ import AdminScreen from './Screens/AdminScreen'
 import LoginScreen from './Screens/LoginScreen'
 import Header from './components/Header'
 import { BrowserRouter, Route } from "react-router-dom";
-import { initialState, reducer } from "./Context/reducer";
+import { initialState, reducer } from "./reducer/reducer";
 import Footer from "./components/Footer";
 
 
