@@ -1,0 +1,77 @@
+.about, .top {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  padding-top: 70px;
+  text-align: center;
+  margin: 5px;
+}
+
+
+.about_box {
+  margin: 0px 55px;
+}
+.about_box h2,
+p {
+  text-align: center;
+}
+.about_box img {
+  height: 50%;
+  width: 95%;
+  border-radius: 50%;
+}
+
+h1 {
+  margin-top: 40px;
+}
+
+.about_box h2 {
+  text-align: center;
+  margin: 1.5rem 0rem;
+}
+
+
+/* For Carousel */
+.carousel-item-next,
+.carousel-item-prev,
+.carousel-item.active {
+  display: flex;
+}
+
+
+.carousel_caption {
+  position: absolute;
+  top: 0;
+}
+
+.carousel_caption h2 {
+  color: #fff;
+}
+
+.carousel img {
+  height: 300px;
+  padding: 30px;
+  margin: 40px;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.carousel a {
+  margin: 0 auto;
+}
+
+.btn-outline-success {
+  background-color: white;
+  color:black;
+  border-color:white;
+}
+
+.adminpage {
+  height: '70vh'
+}
+
+footer {
+  background-color: #212529;
+  color: white;
+  padding: 20px 0px;
+}
