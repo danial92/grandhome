@@ -26,7 +26,7 @@ function Routing() {
   return (
     <div className='py-4 px-5'>
       <Route path='/admin' component={AdminScreen} exact/>
-      <Route path='/login' component={LoginScreen} />
+      <Route path='/login' component={LoginScreen} exact />
       <Route path='/projects' component={ProjectsScreen} />
       <Route path='/' component={HomeScreen} exact/>
   </div>

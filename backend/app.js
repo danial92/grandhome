@@ -19,16 +19,17 @@ require("./models/user_model");
 app.use(express.json()); // recognizes the json object requests
 
 // Routes
-app.use(require("./routes/projectsRoute"));
-app.use(require("./routes/authRoute"));
-app.use(require("./routes/uploadRoute"));
 
 const folder = path.resolve()
 app.use('/uploads', express.static(path.join(folder, '/uploads')))
 
-
 app.use(express.static(path.join(__dirname, 'build')))
 app.get('/', (req, res) => res.sendFile(path.resolve(__dirname, 'build', 'index.html')))
+
+app.use(require("./routes/projectsRoute"));
+app.use(require("./routes/authRoute"));
+app.use(require("./routes/uploadRoute"));
+
 
 // PORT
 const port = process.env.PORT || 3002

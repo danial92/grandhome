@@ -20,6 +20,9 @@ const Header = () => {
                     <LinkContainer to='/projects'>
                         <Nav.Link >All Projects</Nav.Link>
                     </LinkContainer>
+                    <LinkContainer to='/login'>
+                        <Nav.Link >Login</Nav.Link>
+                    </LinkContainer>
                     {
                         state && (
                             <Button variant='primary'
