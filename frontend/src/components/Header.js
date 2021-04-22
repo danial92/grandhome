@@ -8,7 +8,6 @@ import { UserContext } from '../App'
 const Header = () => {
     const { state, dispatch } = useContext(UserContext);
     const history = useHistory();
-
     
     return (
         <header>
@@ -19,9 +18,6 @@ const Header = () => {
                     <Nav className="ml-left">
                     <LinkContainer to='/projects'>
                         <Nav.Link >All Projects</Nav.Link>
-                    </LinkContainer>
-                    <LinkContainer to='/login'>
-                        <Nav.Link >Login</Nav.Link>
                     </LinkContainer>
                     {
                         state && (

@@ -29,7 +29,7 @@ const ProjectsScreen = () => {
 
 
     return (
-        <div>
+        <div style={{ height: '70vh' }}>
             <h2 className='text-center'>Our All Projects</h2>
             {   
                 loading ? <Loader />

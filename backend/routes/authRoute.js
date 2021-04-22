@@ -7,7 +7,6 @@ const jwt = require("jsonwebtoken");
 
 router.post("/signin", (req, res) => {
     const { email, password } = req.body;
-    console.log(req.body)
 
     if(!email || !password) {
         return res.status(404).json({ message: "Please fill all fields!" })
