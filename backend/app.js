@@ -19,14 +19,6 @@ require("./models/user_model");
 app.use(express.json()); // recognizes the json object requests
 
 // Routes
-
-// app.use(express.static(path.join(__dirname, 'build')))
-// // app.get('/' && '/*', function (req, res) {
-// //     // res.sendFile(path.join(__dirname, 'build', 'index.html'));
-// //     res.sendFile(path.join(__dirname, 'build', 'index.html'))
-// // });
-// app.get('*', (req, res) => res.sendFile(path.resolve(__dirname, 'build', 'index.html')))
-
 app.use(require("./routes/projectsRoute"));
 app.use(require("./routes/authRoute"));
 app.use(require("./routes/uploadRoute"));
