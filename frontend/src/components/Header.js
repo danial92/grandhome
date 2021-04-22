@@ -36,7 +36,7 @@ const Header = () => {
                     }
                     </Nav>
                 </Navbar.Collapse>
-                <Navbar.Brand href="/">Grandhome Investments</Navbar.Brand>
+                <Navbar.Brand href="/">Grand Home Investments</Navbar.Brand>
                 </Container>
             </Navbar>
         </header>

@@ -26,7 +26,7 @@ const HomeProjects = () => {
 
     return (
         <div>
-            <h1 style={{ textAlign: 'center' }}>Our Projects On Sale</h1>
+            <h1 style={{ textAlign: 'center' }}>Projects Completed</h1>
             <Row>
                     {completedProjects.slice(-8).reverse().map(project => (
                         <Col key={project._id} sm={12} md={6} lg={4} xl={3}> 
@@ -34,7 +34,7 @@ const HomeProjects = () => {
                         </Col>
                     ))}
             </Row>
-            <h1 style={{ textAlign: 'center' }}>Our Projects Under Renovation</h1>
+            <h1 style={{ textAlign: 'center' }}>Projects Under Renovation</h1>
             <Row>
                     {renovatingProjects.slice(-8).reverse().map(project => (
                         <Col key={project._id} sm={12} md={6} lg={4} xl={3}> 
@@ -42,7 +42,7 @@ const HomeProjects = () => {
                         </Col>
                     ))}
             </Row>
-            <h1 style={{ textAlign: 'center' }}>Our Upcoming Projects</h1>
+            <h1 style={{ textAlign: 'center' }}>Upcoming Projects</h1>
             <Row>
                     {upcomingProjects.slice(-8).reverse().map(project => (
                         <Col key={project._id} sm={12} md={6} lg={4} xl={3}> 

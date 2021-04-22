@@ -9,7 +9,7 @@ const Footer = () => {
                         <h5>Contact Info</h5>
                         <p><strong>Email: </strong>grandhomeinvestments@gmail.com</p>
                         <p><strong>Phone: </strong>(732) 233-4744</p>
-                        <Col>Copyright &copy; GrandHome Investments</Col>
+                        <Col>Copyright &copy; Grand Home Investments</Col>
                     </Container>
                 </Row> 
         </footer>

@@ -24,15 +24,12 @@ const ProjectsCarousel = () => {
     }, []);
 
     return (
-        <Carousel pause='hover' className='bg-primary'>
+        <Carousel pause='hover' className='bg-light'>
         {loading ? (<Loader />) :
         topProjects.slice(-3).reverse().map(project => (
             <Carousel.Item key={project._id}>
                 <Link onClick={() => window.open(`${project.link}`)}>
                     <Image style={{ display: 'block' }} src={project.img} alt={project.address} fluid />
-                    <Carousel.Caption className='carousel_caption'>
-                        <h2 style={{ display: 'block' }}>{project.address}</h2>
-                    </Carousel.Caption>
                 </Link>
             </Carousel.Item>
         ))}
