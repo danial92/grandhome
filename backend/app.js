@@ -4,13 +4,12 @@ const app = express();
 const path = require('path');
 
 // connecting to mongo database
-// require('./db/db')
 const db = require('./db/db');
 
 const dotenv = require('dotenv')
 dotenv.config();
 
-db() // db() function should be called after dotenv.config(). Otherwise, It won't work
+db() 
 
 // Models
 require("./models/projects_model");
