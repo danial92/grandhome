@@ -8,6 +8,8 @@ import Header from './components/Header'
 import { BrowserRouter, Route } from "react-router-dom";
 import { initialState, reducer } from "./reducer/reducer";
 import Footer from "./components/Footer";
+import DBScreen from "./Screens/DBScreen";
+import RandomScreen from "./Screens/RandomScreen";
 
 
 export const UserContext = createContext();
@@ -28,6 +30,8 @@ function Routing() {
       <Route path='/admin' component={AdminScreen} exact/>
       <Route path='/login' component={LoginScreen} exact />
       <Route path='/projects' component={ProjectsScreen} />
+      <Route path='/random' component={RandomScreen} />
+      <Route path='/db' component={DBScreen} />
       <Route path='/' component={HomeScreen} exact/>
   </div>
   )

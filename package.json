@@ -7,7 +7,8 @@
     "start": "node backend/app",
     "server": "nodemon backend/app",
     "client": "npm start --prefix frontend",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "flask-dev": "cd backend/my_flask_app && FLASK_APP=app.py FLASK_ENV=development flask run"
   },
   "author": "Danial Arshad",
   "license": "ISC",
@@ -19,6 +20,8 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.12.4",
     "multer": "^1.4.2",
-    "nodemon": "^2.0.7"
+    "nodemon": "^2.0.7",
+    "sequelize": "^6.37.1",
+    "sqlite3": "^5.1.7"
   }
 }

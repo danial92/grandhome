@@ -18,6 +18,7 @@ require("./models/user_model");
 app.use(express.json()); // recognizes the json object requests
 
 // Routes
+app.use(require("./routes/dbRoute"));
 app.use(require("./routes/projectsRoute"));
 app.use(require("./routes/authRoute"));
 app.use(require("./routes/uploadRoute"));
