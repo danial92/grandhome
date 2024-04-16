@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node backend/app",
     "server": "nodemon backend/app",
-    "client": "npm start --prefix frontend",
+    "client": "npm start --host 192.168.1.111 --prefix frontend",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "flask-dev": "cd backend/my_flask_app && FLASK_APP=app.py FLASK_ENV=development flask run"
   },

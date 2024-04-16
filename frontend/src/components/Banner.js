@@ -99,7 +99,8 @@ function Banner() {
         </ul>
       </div>
     </div>
-    <div style={{ marginLeft: '-120px' }} className='banner-logo'>
+    {/* <div style={{ marginLeft: '-120px' }} className='banner-logo'> */}
+    <div className='banner-logo'>
         <img src={bannerImg} alt=""  />
     </div>
     </div>

@@ -30,15 +30,15 @@ app.use(require("./routes/uploadRoute"));
 const folder = path.resolve()
 app.use('/uploads', express.static(path.join(folder, '/uploads')))
 
-if(process.env.NODE_ENV === 'production') {
+// if(process.env.NODE_ENV === 'production') {
     app.use(express.static(path.join(__dirname, 'build')))
 
     app.get('*', (req, res) => res.sendFile(path.resolve(__dirname, 'build', 'index.html')))
-} else {
-    app.get('/', (req, res) => {
-        res.send('API is running..!!!')
-    })
-}
+// } else {
+//     app.get('/', (req, res) => {
+//         res.send('API is running..!!!')
+//     })
+// }
 
 // PORT
 const port = process.env.PORT || 3002

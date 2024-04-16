@@ -135,13 +135,13 @@ const Header = () => {
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
-                        <Nav style={{ margin: '0rem 8rem' }} className="ml-auto"> {/* ml-auto to push the Nav to the right */}
+                        <Nav className="ml-auto nav-items"> {/* ml-auto to push the Nav to the right */}
                             <LinkContainer style={{ fontSize: '27px', fontFamily: 'math' }} to='/projects'>
                                 <Nav.Link style={{ cursor: 'pointer' }}>Project Gallery</Nav.Link>
                                 {/* <Nav.Link style={{ cursor: 'pointer' }}>PROJECT GALLERY</Nav.Link> */}
                             </LinkContainer>
                             {/* <LinkContainer to=''> */}
-                                <Nav.Link style={{ fontFamily: 'math', fontSize: '27px', marginLeft: '1rem', cursor: 'pointer' }} onClick={scrollToFooter}>Contact Us</Nav.Link>
+                                <Nav.Link style={{ fontFamily: 'math', fontSize: '27px', cursor: 'pointer' }} onClick={scrollToFooter}>Contact Us</Nav.Link>
                                 {/* <Nav.Link style={{ fontSize: '27px', marginLeft: '1rem', cursor: 'pointer' }} onClick={scrollToFooter}>CONTACT US</Nav.Link> */}
                             {/* </LinkContainer> */}
                             {state && (

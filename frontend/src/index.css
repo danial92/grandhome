@@ -10,16 +10,21 @@ html, body {
   padding: 0px 5px;
 }
 
+.nav-items {
+  margin-right: 2.5rem;
+}
+
 .about, .top {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  padding-top: 70px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* padding-top: 70px; */
   text-align: center;
-  margin: 5px;
+  grid-gap: 50px;
 }
 
 .about_box {
-  margin: 18px 55px;
+  /* margin: 18px 55px; */
+  overflow: auto;
 }
 
 .about_box h2, p {
@@ -101,4 +106,10 @@ footer {
   color: white;
   padding: 20px 0px;
   margin-top: 15vh;
+}
+
+@media (max-width: 991px) {
+  .navbar-nav a {
+    margin-left: 4rem;
+  }
 }
