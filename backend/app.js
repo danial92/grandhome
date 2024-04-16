@@ -2,6 +2,7 @@
 const express = require("express");
 const app = express();
 const path = require('path');
+const bodyParser = require("body-parser");
 
 // connecting to mongo database
 const db = require('./db/db');
@@ -9,7 +10,10 @@ const db = require('./db/db');
 const dotenv = require('dotenv')
 dotenv.config();
 
-db() 
+db();
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // Models
 require("./models/projects_model");
@@ -35,7 +39,6 @@ if(process.env.NODE_ENV === 'production') {
         res.send('API is running..!!!')
     })
 }
-
 
 // PORT
 const port = process.env.PORT || 3002

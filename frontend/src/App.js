@@ -10,6 +10,9 @@ import { initialState, reducer } from "./reducer/reducer";
 import Footer from "./components/Footer";
 import DBScreen from "./Screens/DBScreen";
 import RandomScreen from "./Screens/RandomScreen";
+import CompletedProjectsScreen from "./Screens/CompletedProjectsScreen";
+import RenovationProjectsScreen from "./Screens/RenovationProjects.Screen";
+import UpcomingProjectsScreen from "./Screens/UpcomingProjectsScreen";
 
 
 export const UserContext = createContext();
@@ -29,6 +32,9 @@ function Routing() {
     <div className='py-4 px-5'>
       <Route path='/admin' component={AdminScreen} exact/>
       <Route path='/login' component={LoginScreen} exact />
+      <Route path='/completedprojects' component={CompletedProjectsScreen} exact/>
+      <Route path='/renovationprojects' component={RenovationProjectsScreen} exact/>
+      <Route path='/upcomingprojects' component={UpcomingProjectsScreen} exact/>
       <Route path='/projects' component={ProjectsScreen} />
       <Route path='/random' component={RandomScreen} />
       <Route path='/db' component={DBScreen} />

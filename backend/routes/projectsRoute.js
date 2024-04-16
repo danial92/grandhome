@@ -17,6 +17,11 @@ router.get("/homeprojects", async (req, res) => {
     res.json({ compProjects: compProjects, renoProjects: renoProjects, upcomProjects: upcomProjects, topProjects: topProjects })
 })
 
+// Route for top projects
+router.get("/topprojects", async (req, res) => { 
+    const projects = await Project.find({ top: true })
+    res.json({projects: projects})
+})
 
 // Route for all projects
 router.get("/allprojects", async (req, res) => { 
@@ -24,10 +29,24 @@ router.get("/allprojects", async (req, res) => {
     res.json({projects: projects})
 })
 
+router.get("/completedprojects", async (req, res) => { 
+    const compProjects = await Project.find({ status: "completed" })
+    res.json({projects: compProjects})
+})
+
+router.get("/renovationprojects", async (req, res) => {
+    const renoProjects = await Project.find({ status: "renovating" })
+    res.json({projects: renoProjects})
+})
+
+router.get("/upcomingprojects", async (req, res) => {
+    const upcomProjects = await Project.find({ status: "upcoming" })
+    res.json({projects: upcomProjects})
+})
 
 // Route to create new projects
 router.post("/create", requireAuth, (req, res) => {
-    const { link, address, status, image, isTop } = req.body; 
+    const { link, address, status, order, img, isTop } = req.body;
 
     if(!link || !address || !status) { // checking if anything is missing in json body
         return res.status(404).json({ message: "Please fill all fields!" })
@@ -45,7 +64,8 @@ router.post("/create", requireAuth, (req, res) => {
             link,
             address,
             status,
-            img: image,
+            order,
+            img,
             top: isTop
         })
         newProject.save() 

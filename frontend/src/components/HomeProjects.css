@@ -1,0 +1,20 @@
+.see-more-icon {
+    display: inline-block;
+    width: 50px; /* Adjust size as needed */
+    height: 50px; /* Adjust size as needed */
+    background-color: #007bff; /* Bootstrap primary blue */
+    color: white;
+    text-align: center;
+    line-height: 50px; /* Aligns the arrow vertically */
+    position: relative;
+    font-size: 25px; /* Adjust arrow size */
+    margin: 0 auto; /* Center the icon */
+}
+
+.see-more-icon::after {
+    content: '→'; /* Unicode right arrow */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}

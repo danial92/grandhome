@@ -8,7 +8,7 @@ module.exports = (req, res, next) => {
     }
 
     const token = authorization.replace("Bearer ", "");
-    jwt.verify(token, process.env.SECRET_CODE, (err, payload) => {
+    jwt.verify(token, 'grandi786', (err, payload) => {
         if(err) {
             return res.json({ error: "Login is required to access this resource!" })
         }

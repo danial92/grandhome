@@ -4,14 +4,13 @@ import Message from '../components/Message'
 import ProjectLayout from '../components/ProjectLayout'
 import Loader from '../components/Loader'
 
-const ProjectsScreen = () => {
-
+const UpcomingProjectsScreen = () => {
     const [projects, setProjects] = useState([])
     const [loading, setLoading] = useState(true)
     console.log(projects)
 
     useEffect(() => {
-        fetch("/allprojects", {
+        fetch("/upcomingprojects", {
             method: "get",
             headers: {
                 "Content-Type": "application/json"
@@ -30,14 +29,14 @@ const ProjectsScreen = () => {
 
     return (
         <div style={{ height: '70%' }}>
-            <h2 className='text-center'>Project Gallery</h2>
+            <h2 className='text-center'>Upcoming Projects</h2>
             {   
                 loading ? <Loader />
                 :
                 <Row>
                     {!projects ? <Message variant='primary'>No Projects Yet...</Message>
                     :
-                    projects.slice().reverse().map(project => (
+                    projects.map(project => (
                         <Col key={project._id} sm={12} md={6} lg={4} xl={3}> 
                                 <ProjectLayout project={project} />
                         </Col>
@@ -49,4 +48,4 @@ const ProjectsScreen = () => {
 }
 
 
-export default ProjectsScreen
+export default UpcomingProjectsScreen;

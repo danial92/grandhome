@@ -3,12 +3,17 @@ import gh_1 from '../images/gh_1.jpg';
 import gh_2 from '../images/gh_2.jpg';
 import gh_3 from '../images/gh_3.jpg';
 import HomeProjects from '../components/HomeProjects'
-import ProjectsCarousel from '../components/ProjectsCarousel';
+import './styling.css';
+import Banner from '../components/Banner';
 
 const Home = () => {
     return (
         <div>
-        <ProjectsCarousel />
+        {/* <ProjectsCarousel /> */}
+        {/* <div className='head'>
+            <Image src={head} alt="" />
+        </div> */}
+        <Banner />
         <div className="about">
             <div className="about_box about_01">
                 <img src={gh_1} className="rounded-circle" alt="..." />
@@ -16,8 +21,7 @@ const Home = () => {
                 <strong><p>
                     We offer a safe investment environment keeping the Islamic values in
                     mind. The localities in which the houses are invested in, are well
-                    known and hot areas of central NJ for ease of selling. Our partners
-                    receive 45% of the profit proceeds! Not only that, but you also
+                    known areas of central NJ for ease of selling. Not only that, but you also
                     become partners in the LLC that you invested in to assure complete
                     transparency.
                 </p></strong>
@@ -26,11 +30,11 @@ const Home = () => {
                 <img src={gh_2} className="rounded-circle" alt="..." />
                 <h2>A Proven Approach</h2>
                 <strong><p>
-                    An proven approach which is based on an experience of close to 5
-                    years. We give timely updates, ease of transactions, profit
+                    An proven approach which is based on years of experience. 
+                    We give timely updates, ease of transactions, profit
                     analysis, that are combined with roll over opportunities.
-                    Transparency of estimates and expenses can be viewed by investors on
-                    Google sheets. Your proceeds can easily be rolled over to upcoming
+                    Transparency of estimates and expenses can be viewed by investors in real time. 
+                    Your proceeds can easily be rolled over to upcoming
                     projects with more chances of success, inshaAllah.
                 </p></strong>
             </div>
@@ -39,7 +43,7 @@ const Home = () => {
                 <h2>Why Us?</h2>
                 <strong><p>
                     We take the lead in assuring you that the money that sits in your
-                    bank ideally can be invested in profitable ventures. We make sure we
+                    bank ideally can be invested in profitable halal ventures. We make sure we
                     analyze the markets and make comparisons before finally choosing the
                     right property for you. We spend significant time in making sure
                     that every potential property is researched upon in detail before

@@ -1,0 +1,114 @@
+.banner-head {
+    display: flex;
+}
+
+.banner {
+    background-color: inherit;
+    color: #333;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  .banner-content {
+    padding-bottom: 20px;
+  }
+
+  .banner-content h1 {
+    margin-top: 0px;
+  }
+
+  /* .about_box h2, p {
+    text-align: left;
+  } */
+  .banner-content p {
+    text-align: left;
+  }
+
+  .completed-homes h2 {
+    color: #333;
+    /* margin-bottom: 20px; */
+    text-align: left;
+    font-weight: bold;
+  }
+
+  h1 {
+    font-size: 24px;
+    color: #000;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  h2 {
+    font-size: 20px;
+    color: #000;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    font-size: 16px;
+    /* line-height: 1.6; */
+    margin-bottom: 10px;
+  }
+  
+  .completed-homes ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+  }
+  
+  .completed-homes li {
+    margin-right: 10px;
+    display: flex;
+    /* align-items: center; */
+    flex-direction: column;
+  }
+
+  .completed-homes a {
+    color: black;
+  }
+
+  .completed-homes h2 {
+    margin-top: 0px;
+  }
+  
+  .completed-homes li img {
+    /* width: 100px; */
+    /* height: auto; */
+    width: 245px;
+    height: 175px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .completed-homes li span {
+    font-size: 16px;
+  }
+
+  .banner-logo img {
+    /* padding: 57px;
+     */
+     padding: 57px 0px;
+  }
+  
+  @media (max-width: 768px) {
+    .banner {
+      flex-direction: column;
+    }
+
+    .banner-logo {
+        display: none;
+    }
+  
+    .completed-homes li {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .completed-homes li img {
+      margin-bottom: 5px;
+    }
+  }

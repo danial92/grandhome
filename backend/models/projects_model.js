@@ -14,6 +14,9 @@ const Project = new mongoose.Schema(
       type: String,
       required: true,
     },
+    order: {
+      type: Number
+    },
     img: {
       type: String,
     },

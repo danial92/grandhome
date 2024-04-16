@@ -6,6 +6,10 @@ html, body {
   overflow-x: hidden;
 }
 
+.navbar {
+  padding: 0px 5px;
+}
+
 .about, .top {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -18,8 +22,7 @@ html, body {
   margin: 18px 55px;
 }
 
-.about_box h2,
-p {
+.about_box h2, p {
   text-align: center;
 }
 
@@ -36,6 +39,11 @@ h1 {
 .about_box h2 {
   text-align: center;
   margin: 1.5rem 0rem;
+  font-weight: bold;
+}
+
+.about_box p {
+  font-weight: lighter;
 }
 
 
