@@ -110,3 +110,9 @@
       margin-bottom: 5px;
     }
   }
+
+  @media (max-width: 484px) {
+    .banner-content h1 {
+      font-size: 19px;
+    }
+  }
