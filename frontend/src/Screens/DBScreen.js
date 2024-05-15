@@ -165,10 +165,10 @@ function DBScreen() {
 
   return (
     <div>
-      {!state ? (
+      {/* {!state ? (
           <Message variant='primary'>Only Admin can access this Resource</Message>
-        ) : (
-        <div>
+        ) : ( */}
+        {/* <div> */}
       <div className='header_div'>
         <h1>Grand Home Investments Database</h1>
         {/* Buttons to switch between forms */}
@@ -194,8 +194,8 @@ function DBScreen() {
           </div>
       </div>
         {renderForm()}
-      </div>
-      )}
+      {/* </div> */}
+      {/* )} */}
     </div>
   );
 }
