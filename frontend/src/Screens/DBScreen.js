@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import axios from 'axios';
 import InvestorForm from '../dbcomponents/InvestorForm/InvestorForm';
 import PropertyForm from '../dbcomponents/PropertyForm/PropertyForm';
@@ -6,8 +6,12 @@ import InvestmentForm from '../dbcomponents/InvestmentForm/InvestmentForm';
 import TransactionForm from '../dbcomponents/TransactionForm/TransactionForm';
 import InvestorDataForm from '../dbcomponents/InvestorDataForm/InvestorDataForm';
 import '../dbcomponents/FormStyling.css';
+import { UserContext } from '../App'
+import Message from '../components/Message'
 
 function DBScreen() {
+  const { state } = useContext(UserContext)
+
   const [formType, setFormType] = useState(null);
   const [formData, setFormData] = useState(null);
   const [data, setData] = useState(null);
@@ -161,6 +165,10 @@ function DBScreen() {
 
   return (
     <div>
+      {!state ? (
+          <Message variant='primary'>Only Admin can access this Resource</Message>
+        ) : (
+        <div>
       <div className='header_div'>
         <h1>Grand Home Investments Database</h1>
         {/* Buttons to switch between forms */}
@@ -171,22 +179,23 @@ function DBScreen() {
           <button onClick={() => setFormType('investment')}>Add Investment</button>
           <button onClick={() => setFormType('transaction')}>Add Transaction</button>
         </div>
-        <div>
-        {successMessage ? (
-          <div className="message-container success-message">
-            <h3>{successMessage}</h3>
-          </div>
-        ) : null}
+          <div>
+            {successMessage ? (
+              <div className="message-container success-message">
+                <h3>{successMessage}</h3>
+              </div>
+            ) : null}
 
-        {errorMessage ? (
-          <div className="message-container error-message">
-            <h3>{errorMessage}</h3>
+            {errorMessage ? (
+              <div className="message-container error-message">
+                <h3>{errorMessage}</h3>
+              </div>
+            ) : null}
           </div>
-        ) : null}
       </div>
+        {renderForm()}
       </div>
-
-      {renderForm()}
+      )}
     </div>
   );
 }
