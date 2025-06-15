@@ -56,7 +56,6 @@ function DBScreen() {
   };
 
   const handleFormSubmit = async (e) => {
-    e.preventDefault();
 
     // Check if formData is empty
     if (!formData || Object.keys(formData).length === 0) {
@@ -67,6 +66,7 @@ function DBScreen() {
     try {
       // Implement logic to handle form submission based on the form type
       if (formType === 'get_investor_data') {
+          e.preventDefault();
         try {
         //   const response = await axios.get(`/get_investor_data/${formData.investor_name}`);
           const response = await axios.get(`/get_investor_data/${formData.investor_name}`);
