@@ -263,9 +263,9 @@ const AdminScreen = () => {
     <div style={{ height: '70vh' }}>
       <h2 className='text-center'>Admin Page</h2>
       <div style={{ display: 'flex', justifyContent: 'center' }}>
-        {!state ? (
+        {/* {!state ? (
           <Message variant='primary'>Only Admin can access this Resource</Message>
-        ) : (
+        ) : ( */}
           <>
             <Form onSubmit={submitHandler}>
               <Form.Group controlId='link'>
@@ -345,7 +345,7 @@ const AdminScreen = () => {
             </Form>
             {success && <Message variant='success'>Project Added Successfully..!!!</Message>}
           </>
-        )}
+        {/* )} */}
       </div>
     </div>
   )
